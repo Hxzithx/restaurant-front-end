@@ -269,6 +269,18 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('order-checkout')
         .addEventListener('click', function () {
 
+        //check cart is not empty
+        const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+        if(cart.length === 0) {
+            Swal.fire({
+               icon : 'warning',
+               title : 'Cart is Empty',
+               text : 'Please add items to your cart before checkout!',
+            });
+            return;
+        }
+
           fetch('/customer/profile/check')
          .then(res => res.json())
          .then(result => {

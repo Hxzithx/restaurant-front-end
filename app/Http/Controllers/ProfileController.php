@@ -28,6 +28,7 @@ class ProfileController extends Controller
 
     public function update(Request $request)
     {
+        
         try {
 
             $request->validate([
@@ -49,13 +50,13 @@ class ProfileController extends Controller
 
                 //attach file if exist
                 if($request->hasFile('avatar')) {
-                    $http->attach(
+                    $http = $http->attach(
                       'avatar',
                       file_get_contents($request->file('avatar')->getRealPath()),
                       $request->file('avatar')->getClientOriginalName()
                     );
                 }
-                $response = $http->post(env('API_BASE_URL') . 'api/customer/profile', [
+                $response = $http->post(env('API_BASE_URL').'api/customer/profile', [
                     '_method'     => 'PUT', 
                     'first_name'  => $firstName,
                     'last_name'   => $lastName,
@@ -65,7 +66,6 @@ class ProfileController extends Controller
 
             if ($response->successful()) {
                 $user = $response->json()['customer'];
-
 
                 $safeName = trim(
                    ($user['first_name'] ?? '') . ' ' .
@@ -78,10 +78,10 @@ class ProfileController extends Controller
                 // Update session
                 session([
                     'user_name'    => $safeName,
-                    'user_email'   => $user['email']   ,
-                    'user_avatar'  => $user['avatar']  ,
-                    'user_phone'   => $user['phone']   ,
-                    'user_address' => $user['address'] ,
+                    'user_email'   => $user['email'],
+                    'user_avatar'  => $user['avatar'],
+                    'user_phone'   => $user['phone'],
+                    'user_address' => $user['address'],
                 ]);
 
                 return response()->json([
@@ -100,6 +100,7 @@ class ProfileController extends Controller
 
             return response()->json([
                 'message' => 'Something went wrong.',
+                'error' => $e->getMessage(),
             ], 500);
         }
     }

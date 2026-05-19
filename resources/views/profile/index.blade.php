@@ -34,14 +34,16 @@
             {{-- Avatar Section --}}
             <div class="avatar-section">
  
+                {{-- {{ dd(session('user_avatar')) }} --}}
                 <div class="avatar-ring">
                     <div class="profile-avatar-large">
                         <img
                             id="avatarPreview"
-                            src="{{ asset(session('user_avatar')) }}"
+                            src="{{ session('user_avatar') }}"
                             style="{{ session('user_avatar') ? 'display:block;' : 'display:none;' }}"
                             alt="Avatar"
                         >
+                        
                         <span
                             id="avatarLetter"
                             style="{{ session('user_avatar') ? 'display:none;' : 'display:flex;' }}"
@@ -187,8 +189,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const btnArrow = btn.querySelector('.btn-arrow');
  
         // Loading state
-        btn.disabled          = true;
-        btnText.textContent   = 'Saving...';
+        btn.disabled            = true;
+        btnText.textContent     = 'Saving...';
         btnLoader.style.display = 'inline-flex';
         btnArrow.style.display  = 'none';
  

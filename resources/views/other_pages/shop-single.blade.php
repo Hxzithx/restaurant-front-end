@@ -224,7 +224,7 @@
          <div class="kitchen-note-box">
          <label>Note to Kitchen</label>
           <textarea id="kitchen-note"
-            placeholder="Example: Less spicy, no onion..."></textarea>
+            placeholder="Ex: Less spicy, no onion..."></textarea>
          </div>
           @endif
      </div>

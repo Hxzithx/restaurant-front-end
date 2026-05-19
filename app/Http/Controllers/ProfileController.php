@@ -35,7 +35,7 @@ class ProfileController extends Controller
                 'name'    => 'sometimes|string|max:255',
                 'phone'   => 'sometimes|string|max:20',
                 'address' => 'sometimes|string|max:255',
-                'avatar'  => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+                'avatar'  => 'nullable|image|mimes:jpg,jpeg,png,webp|max:10240',
             ]);
 
             //split full name into first + last names 

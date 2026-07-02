@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Facades\Session;
 
 class GoogleController extends Controller
 {
     public function redirect()
     {
         //clear previous session
-        session()->flush();
+        Session::flush();
         return Socialite::driver('google')->redirect();
     }
 

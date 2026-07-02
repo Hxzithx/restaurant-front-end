@@ -67,7 +67,7 @@
                         <div class="product-item">
 
                             <div class="product--img">
-                                <img src="{{ $item['image_url'] ?? asset('assets/images/shop/grid/1.jpg') }}" alt="Product">
+                                <img src="{{ $item['image_url'] ?? asset('assets/images/shop/grid/15.jpg') }}" alt="Product">
 
                                 <div class="product--hover">
                                     <div class="product--action">

@@ -43,7 +43,7 @@
                                 @if($item['image_url'])
                                     <img src="{{ $item['image_url'] }}" alt="{{ $item['base_name'] }}" />
                                 @else
-                                    <img src="{{ asset('assets/images/shop/grid/1.jpg') }}" alt="{{ $item['base_name'] }}" />
+                                    <img src="{{ asset('assets/images/shop/grid/15.jpg') }}" alt="{{ $item['base_name'] }}" />
                                 @endif
                             </div>
                         </div>
@@ -248,7 +248,7 @@
                                                                 <img src="{{ $related['image_url'] }}"
                                                                     alt="{{ $related['base_name'] }}"/>
                                                             @else
-                                                                <img src="{{ asset('assets/images/shop/grid/1.jpg') }}"
+                                                                <img src="{{ asset('assets/images/shop/grid/15.jpg') }}"
                                                                     alt="{{ $related['base_name'] }}"/>
                                                             @endif
                                                             <div class="product--hover">

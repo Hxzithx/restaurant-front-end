@@ -71,7 +71,7 @@
 					data-easeout="Power4.easeInOut" 
 					data-masterspeed="2000">
 					<!-- MAIN IMAGE -->
-					<img src="{{ asset('assets/images/background/2.jpg') }}" alt="Slide Background Image" width="1920" height="1280">
+					<img src="{{ asset('assets/images/sliders/slide-bg/1.jpg') }}" alt="Slide Background Image" width="1920" height="1280">
 					<!-- LAYER NR. 1 -->
 					<div class="tp-caption" 
 						data-x="center" data-hoffset="0" 

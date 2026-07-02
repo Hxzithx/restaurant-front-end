@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <button class = "remove-item" data-id = "${item.id}">
                             <i class = "fa fa-trash"></i>
                         </button>
-                        <img src="${item.image || '/assets/images/shop/thumb/1.jpg'}" width="50" class="cart-image">
+                        <img src="${item.image || '/assets/images/shop/thumb/7.jpg'}" width="50" class="cart-image">
                          <div class="cart-details">
                             <span class="cart-name">
                               ${item.name}

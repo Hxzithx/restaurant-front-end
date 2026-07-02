@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Restaurant</title>
-    <link href="{{ asset('assets/images/favicon/favicon.png') }}" rel="icon">
+    <link href="{{ asset('assets/images/favicon/icon.png') }}" rel="icon">
     <link href="{{ asset('assets/css/external.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
